@@ -33,6 +33,13 @@ def chat():
     except Exception as e:
         return jsonify({'response': f'An error occurred: {str(e)}', 'quit': False}), 500
 
-if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+if __name__ == "__main__":
+    app.run(
+        host="0.0.0.0",
+        port=5000,
+        debug=False,
+        use_reloader=False
+    )
+
+
 
